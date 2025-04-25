@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://dow4qa2a3f6ki"]
+[gd_scene load_steps=4 format=3 uid="uid://dow4qa2a3f6ki"]
+
+[ext_resource type="Script" uid="uid://bpsas1hlywfwn" path="res://Scripts/game_manager.gd" id="1_oj352"]
+[ext_resource type="PackedScene" uid="uid://cqqh3o1xose0d" path="res://Scenes/ground.tscn" id="2_e5fcp"]
+[ext_resource type="PackedScene" uid="uid://detmoj2btlo67" path="res://Scenes/character.tscn" id="2_sq00h"]
 
 [node name="GameManager" type="Node"]
+script = ExtResource("1_oj352")
+
+[node name="Ground" parent="." instance=ExtResource("2_e5fcp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.25459)
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_sq00h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.646654, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.770035, 0.638002, 0, -0.638002, 0.770035, 0, 5.26823, 5.5857)

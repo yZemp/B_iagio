@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://detmoj2btlo67"]
+
+[ext_resource type="Texture2D" uid="uid://dyo0u12sdhykg" path="res://Assets/ERENJEAGER.PNG" id="1_ay717"]
+[ext_resource type="Script" uid="uid://dhrv8recv1yji" path="res://Scripts/character.gd" id="1_ushfy"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vpr6t"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ushfy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_owm7s"]
+albedo_texture = ExtResource("1_ay717")
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_ushfy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.07723, 0)
+shape = SubResource("CapsuleShape3D_vpr6t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_ushfy")
+surface_material_override/0 = SubResource("StandardMaterial3D_owm7s")
