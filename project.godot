@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="B_iagio"
+run/main_scene="uid://ncwabnlr5t8l"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"

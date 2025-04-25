@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwpywx6rd4vsn"]
+
+[ext_resource type="Texture2D" uid="uid://bh2hr88m3hsyx" path="res://Assets/mao.jpg" id="1_g24sy"]
+
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_5xgho"]
+
+[node name="terrain" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_5xgho")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -1.96791, 0)
+texture = ExtResource("1_g24sy")
