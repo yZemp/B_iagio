@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://dow4qa2a3f6ki"]
+
+[ext_resource type="PackedScene" uid="uid://cqqh3o1xose0d" path="res://Scenes/ground.tscn" id="2_8j60k"]
+[ext_resource type="PackedScene" uid="uid://bijwu1k27wv77" path="res://Scenes/playerEvo.tscn" id="3_fo5ed"]
+
+[sub_resource type="GDScript" id="GDScript_go701"]
+script/source = "extends Node
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="World" type="Node"]
+script = SubResource("GDScript_go701")
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+
+[node name="Ground" parent="." instance=ExtResource("2_8j60k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.25459)
+
+[node name="PlayerEvo" parent="." instance=ExtResource("3_fo5ed")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.88219, -2.49628)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.828637, 0.26276, -0.494285, 0, 0.882989, 0.469395, 0.559786, -0.388958, 0.731677, -16.926, 5.08469, 5.1732)
+light_color = Color(0.960854, 0.975143, 0.891806, 1)

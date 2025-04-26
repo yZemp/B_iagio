@@ -1,6 +1,6 @@
 extends Control
 
-@onready var game_manager: Node = $"."
+@onready var world: Node = $"."
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_start_btn_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/game_manager.tscn")
+	get_tree().change_scene_to_file("res://Scenes/world.tscn")
 
 func _on_quit_btn_pressed() -> void:
 	get_tree().quit()
