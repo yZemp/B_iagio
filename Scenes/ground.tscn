@@ -1,11 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqqh3o1xose0d"]
+[gd_scene load_steps=5 format=3 uid="uid://cqqh3o1xose0d"]
+
+[ext_resource type="Texture2D" uid="uid://dyb4gulxrgr4t" path="res://Assets/black_ground.png" id="1_688p1"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_qvte6"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qvte6"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_688p1"]
-albedo_color = Color(0.247431, 0.462607, 0, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oltiy"]
+albedo_texture = ExtResource("1_688p1")
+uv1_triplanar = true
 
 [node name="Ground" type="Node3D"]
 
@@ -17,4 +20,4 @@ shape = SubResource("WorldBoundaryShape3D_qvte6")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 mesh = SubResource("PlaneMesh_qvte6")
-surface_material_override/0 = SubResource("StandardMaterial3D_688p1")
+surface_material_override/0 = SubResource("StandardMaterial3D_oltiy")
